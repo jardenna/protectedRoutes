@@ -18,6 +18,7 @@ const RouterLoader = createBrowserRouter(
         element={<h1>Super secret info here</h1>}
         loader={async () => {
           const isLoggedIn = false;
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
           if (!isLoggedIn) {
             return redirect('/login');
           }

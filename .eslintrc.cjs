@@ -1,3 +1,5 @@
+const { Warning } = require('postcss');
+
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -20,21 +22,16 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'linebreak-style': 0,
+    'react/jsx-tag-spacing': 0,
     'react/function-component-definition': 'off',
     'react/require-default-props': 'off',
     eqeqeq: 'error',
     'react/react-in-jsx-scope': 'off',
+    'react/no-array-index-key': 'off',
     'react/jsx-uses-react': 'off',
     'no-console': ['warn', { allow: ['info', 'error'] }],
     'react/jsx-one-expression-per-line': 0,
-    'object-curly-newline': [
-      'error',
-      {
-        ObjectExpression: 'always',
-        ObjectPattern: { multiline: true },
-      },
-    ],
-
+    curly: ['error', 'all'],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

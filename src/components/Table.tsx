@@ -1,7 +1,6 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable react/no-array-index-key */
-function DynamicTable() {
-  // Sample data
+import { FC } from 'react';
+interface TableProps {}
+const Table: FC<TableProps> = () => {
   const data = {
     base: 2,
     common: 3,
@@ -12,9 +11,11 @@ function DynamicTable() {
   const baseColumns = Array.from({ length: data.base }, () => (
     <th>Base Column </th>
   ));
+
   const commonColumns = Array.from({ length: data.common }, () => (
     <th>Common Column</th>
   ));
+
   const lastColumns = Array.from({ length: data.last }, () => (
     <th>Last Column</th>
   ));
@@ -44,6 +45,5 @@ function DynamicTable() {
       <tbody>{rows}</tbody>
     </table>
   );
-}
-
-export default DynamicTable;
+};
+export default Table;
