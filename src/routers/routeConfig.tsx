@@ -38,6 +38,11 @@ const routeConfig = createBrowserRouter([
         loader: protectedLoader,
         element: <h1>Super secret info here</h1>,
       },
+      {
+        path: Path.NewProtected,
+        loader: protectedLoader,
+        element: <h1>Super secret info here also here</h1>,
+      },
     ],
   },
 ]);

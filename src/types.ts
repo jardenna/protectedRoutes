@@ -4,5 +4,6 @@ export enum Path {
   Root = '/',
   Login = 'login',
   Protected = 'protected',
+  NewProtected = 'newprotected',
   Logout = 'logout',
 }
