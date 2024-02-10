@@ -1,24 +1,18 @@
-import { FC } from 'react';
-import { Outlet } from 'react-router-dom';
-import Nav from '../components/Nav';
+import { Link, Outlet } from 'react-router-dom';
 
-const Layout: FC = () => (
-  <section className="main-container">
-    <header className="header">
-      <article className="container">
-        <h1>Auth Example using RouterProvider</h1>
+function Layout() {
+  return (
+    <>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="protected">Protected</Link>
+        <Link to="login">Login</Link>
+      </nav>
+      <main>
+        <Outlet />
+      </main>
+    </>
+  );
+}
 
-        <Nav />
-      </article>
-    </header>
-
-    <main className="container">
-      <Outlet />
-    </main>
-
-    <footer className="container">
-      © 2023 Startup Vite, All rights reserved.
-    </footer>
-  </section>
-);
 export default Layout;

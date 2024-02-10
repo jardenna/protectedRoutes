@@ -1,12 +1,12 @@
 import React from 'react';
 import { RouterProvider } from 'react-router-dom';
-import RouterLoader from './routers/RouterLoader';
+import routeConfig from './routers/routeConfig';
 
 function App() {
   return (
     <React.StrictMode>
       <RouterProvider
-        router={RouterLoader}
+        router={routeConfig}
         fallbackElement={<p>Initial Load...</p>}
       />
     </React.StrictMode>
