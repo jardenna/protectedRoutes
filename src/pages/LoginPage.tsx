@@ -1,10 +1,5 @@
 import { FC } from 'react';
-import {
-  Form,
-  useActionData,
-  useLocation,
-  useNavigation,
-} from 'react-router-dom';
+import { Form, useLocation, useNavigation } from 'react-router-dom';
 
 const LoginPage: FC = () => {
   const location = useLocation();
@@ -13,8 +8,6 @@ const LoginPage: FC = () => {
 
   const navigation = useNavigation();
   const isLoggingIn = navigation.formData?.get('username') != null;
-
-  const actionData = useActionData() as { error: string } | undefined;
 
   return (
     <div>
@@ -26,15 +19,6 @@ const LoginPage: FC = () => {
         <button type="submit" disabled={isLoggingIn}>
           {isLoggingIn ? 'Logging in...' : 'Login'}
         </button>
-        {actionData && actionData.error ? (
-          <p
-            style={{
-              color: 'red',
-            }}
-          >
-            {actionData.error}
-          </p>
-        ) : null}
       </Form>
     </div>
   );
