@@ -1,7 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, redirect } from 'react-router-dom';
 
 import fakeAuthProvider from '../auth/auth';
-import { loginLoader, protectedLoader } from '../auth/authFunctions';
+import {
+  loginAction,
+  loginLoader,
+  protectedLoader,
+} from '../auth/authFunctions';
 import Chess from '../pages/Chess';
 import ErrorPage from '../pages/ErrorPage';
 import Layout from '../pages/Layout';
@@ -33,6 +37,7 @@ const routeConfig = createBrowserRouter([
       {
         path: Path.Login,
         loader: loginLoader,
+        action: loginAction,
         element: <LoginPage />,
       },
       {
@@ -43,12 +48,21 @@ const routeConfig = createBrowserRouter([
       {
         path: 'Chess',
         element: <Chess />,
+        loader: protectedLoader,
         children: [
           {
             path: 'play',
             element: <Play />,
           },
         ],
+      },
+      {
+        path: Path.Logout,
+        async action() {
+          // We signout in a "resource route" that we can hit from a fetcher.Form
+          await fakeAuthProvider.signout();
+          return redirect('/');
+        },
       },
     ],
   },
