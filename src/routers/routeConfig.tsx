@@ -2,9 +2,11 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import fakeAuthProvider from '../auth/auth';
 import { loginLoader, protectedLoader } from '../auth/authFunctions';
+import Chess from '../pages/Chess';
 import ErrorPage from '../pages/ErrorPage';
 import Layout from '../pages/Layout';
 import LoginPage from '../pages/LoginPage';
+import Play from '../pages/Play';
 import PublicPage from '../pages/PublicPage';
 import { Path } from '../types';
 
@@ -39,9 +41,14 @@ const routeConfig = createBrowserRouter([
         element: <h1>Super secret info here</h1>,
       },
       {
-        path: Path.NewProtected,
-        loader: protectedLoader,
-        element: <h1>Super secret info here also here</h1>,
+        path: 'Chess',
+        element: <Chess />,
+        children: [
+          {
+            path: 'play',
+            element: <Play />,
+          },
+        ],
       },
     ],
   },
