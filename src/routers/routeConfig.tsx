@@ -1,20 +1,20 @@
-import { createBrowserRouter, redirect } from 'react-router-dom';
-
-import fakeAuthProvider from '../auth/auth';
+import { createHashRouter, redirect } from 'react-router-dom';
 import {
   loginAction,
   loginLoader,
   protectedLoader,
 } from '../auth/authFunctions';
+
 import Chess from '../pages/Chess';
 import ErrorPage from '../pages/ErrorPage';
 import Layout from '../pages/Layout';
 import LoginPage from '../pages/LoginPage';
+import { Path } from '../types';
 import Play from '../pages/Play';
 import PublicPage from '../pages/PublicPage';
-import { Path } from '../types';
+import fakeAuthProvider from '../auth/auth';
 
-const routeConfig = createBrowserRouter([
+const routeConfig = createHashRouter([
   {
     path: Path.Root,
     errorElement: <ErrorPage />,

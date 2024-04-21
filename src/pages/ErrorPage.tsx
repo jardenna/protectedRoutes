@@ -1,9 +1,10 @@
-import { FC } from 'react';
 import {
   isRouteErrorResponse,
   useNavigate,
   useRouteError,
 } from 'react-router-dom';
+
+import { FC } from 'react';
 
 const ErrorPage: FC = () => {
   const navigate = useNavigate();
