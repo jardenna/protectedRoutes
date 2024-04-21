@@ -1,4 +1,5 @@
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
+
 import AuthStatus from '../components/AuthStatus';
 
 function Layout() {
@@ -9,9 +10,9 @@ function Layout() {
           <h1>Auth Example using RouterProvider</h1>
           <AuthStatus />
           <nav>
-            <Link to="/">Home</Link>
-            <Link to="protected">Protected</Link>
-            <Link to="login">Login</Link>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="chess">Chess</NavLink>
+            <NavLink to="login">Login</NavLink>
           </nav>
         </article>
       </header>

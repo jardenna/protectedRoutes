@@ -1,11 +1,11 @@
-import { FC } from 'react';
 import { Form, useLocation, useNavigation } from 'react-router-dom';
+
+import { FC } from 'react';
 
 const LoginPage: FC = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const from = params.get('from') || '/';
-
   const navigation = useNavigation();
   const isLoggingIn = navigation.formData?.get('username') != null;
 

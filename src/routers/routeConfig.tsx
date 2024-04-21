@@ -5,14 +5,14 @@ import {
   protectedLoader,
 } from '../auth/authFunctions';
 
+import fakeAuthProvider from '../auth/auth';
 import Chess from '../pages/Chess';
 import ErrorPage from '../pages/ErrorPage';
 import Layout from '../pages/Layout';
 import LoginPage from '../pages/LoginPage';
-import { Path } from '../types';
 import Play from '../pages/Play';
 import PublicPage from '../pages/PublicPage';
-import fakeAuthProvider from '../auth/auth';
+import { Path } from '../types';
 
 const routeConfig = createHashRouter([
   {
@@ -39,11 +39,6 @@ const routeConfig = createHashRouter([
         loader: loginLoader,
         action: loginAction,
         element: <LoginPage />,
-      },
-      {
-        path: Path.Protected,
-        loader: protectedLoader,
-        element: <h1>Super secret info here</h1>,
       },
       {
         path: 'Chess',

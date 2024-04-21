@@ -2,8 +2,8 @@ import { LoaderFunctionArgs, redirect } from 'react-router-dom';
 
 import fakeAuthProvider from './auth';
 
-export async function loginAction({ request }: LoaderFunctionArgs) {
-  const formData = await request.formData();
+export async function loginAction(loaderAction: LoaderFunctionArgs) {
+  const formData = await loaderAction.request.formData();
   const username = formData.get('username') as string | null;
 
   // Validate our form inputs and return validation errors via useActionData()
