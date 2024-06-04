@@ -1,9 +1,7 @@
+import { FC } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
-import { FC } from 'react';
-
-interface ChessProps {}
-const Chess: FC<ChessProps> = () => (
+const Chess: FC= () => (
   <div>
     <NavLink to="play">Play</NavLink>
     <h1>Chess</h1>

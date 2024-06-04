@@ -1,6 +1,6 @@
+import { FC } from 'react';
 import { Form, useLocation, useNavigation } from 'react-router-dom';
 
-import { FC } from 'react';
 
 const LoginPage: FC = () => {
   const location = useLocation();

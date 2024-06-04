@@ -1,5 +1,4 @@
 import { NavLink, Outlet } from 'react-router-dom';
-
 import AuthStatus from '../components/AuthStatus';
 
 function Layout() {
@@ -12,7 +11,6 @@ function Layout() {
           <nav>
             <NavLink to="/">Home</NavLink>
             <NavLink to="chess">Chess</NavLink>
-            <NavLink to="login">Login</NavLink>
           </nav>
         </article>
       </header>

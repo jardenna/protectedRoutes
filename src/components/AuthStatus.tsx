@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { NavLink, useFetcher, useRouteLoaderData } from 'react-router-dom';
 import { Path } from '../types';
 
-interface AuthStatusProps {}
-const AuthStatus: FC<AuthStatusProps> = () => {
+
+const AuthStatus: FC= () => {
   // Get our logged in user, if they exist, from the root route loader data
   const { user } = useRouteLoaderData('root') as { user: string | null };
   const fetcher = useFetcher();
