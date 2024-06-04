@@ -14,4 +14,5 @@ const Nav: FC = () => (
     </ul>
   </nav>
 );
+
 export default Nav;

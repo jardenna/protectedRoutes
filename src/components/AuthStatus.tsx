@@ -2,17 +2,15 @@ import { FC } from 'react';
 import { NavLink, useFetcher, useRouteLoaderData } from 'react-router-dom';
 import { Path } from '../types';
 
-
-const AuthStatus: FC= () => {
+const AuthStatus: FC = () => {
   // Get our logged in user, if they exist, from the root route loader data
   const { user } = useRouteLoaderData('root') as { user: string | null };
   const fetcher = useFetcher();
+  const isLoggingOut = fetcher.formData != null;
 
   if (!user) {
     return <NavLink to={Path.Login}>Login</NavLink>;
   }
-
-  const isLoggingOut = fetcher.formData != null;
 
   return (
     <div>
@@ -25,4 +23,5 @@ const AuthStatus: FC= () => {
     </div>
   );
 };
+
 export default AuthStatus;

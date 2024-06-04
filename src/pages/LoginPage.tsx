@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { Form, useLocation, useNavigation } from 'react-router-dom';
 
-
 const LoginPage: FC = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
@@ -23,4 +22,5 @@ const LoginPage: FC = () => {
     </div>
   );
 };
+
 export default LoginPage;

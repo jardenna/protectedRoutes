@@ -5,7 +5,6 @@ import {
   useRouteError,
 } from 'react-router-dom';
 
-
 const ErrorPage: FC = () => {
   const navigate = useNavigate();
   const error = useRouteError() as Error;
@@ -29,4 +28,5 @@ const ErrorPage: FC = () => {
     </div>
   );
 };
+
 export default ErrorPage;
