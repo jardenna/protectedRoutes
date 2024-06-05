@@ -6,7 +6,7 @@ const LoginPage: FC = () => {
   const params = new URLSearchParams(location.search);
   const from = params.get('from') || '/';
   const navigation = useNavigation();
-  const isLoggingIn = navigation.formData?.get('username') !== null;
+  const isLoggingIn = navigation.formData?.get('username') != null;
 
   return (
     <div>
