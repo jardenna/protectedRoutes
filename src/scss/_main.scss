@@ -7,11 +7,6 @@
   --focus: 1px dotted #000;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
 html,
 body,
 #root {
@@ -23,18 +18,18 @@ body {
   font-size: 16px;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 10px 20px;
   width: 100%;
-}
-
-.main-container {
-  margin: 0;
-  height: 100%;
-  display: grid;
-  grid-template-rows: max-content 1fr;
+  flex: 1;
 }
 
 h1,
@@ -46,18 +41,9 @@ h3 {
 
 h1 {
   font-family: $font-secondary;
-  font-size: 48px;
+  font-size: rem(48px);
 }
 
 h2 {
   font-family: $font-primary-bold;
-}
-
-a {
-  text-decoration: none;
-
-  &:focus {
-    outline: var(--focus);
-    border: none;
-  }
 }

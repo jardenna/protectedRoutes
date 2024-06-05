@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { Path } from '../types';
 
 const Nav: FC = () => (
-  <nav>
-    <ul>
+  <nav className="main-nav">
+    <ul className="main-nav-list">
       <li>
         <NavLink to={Path.Root}>Home</NavLink>
       </li>

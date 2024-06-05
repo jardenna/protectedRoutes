@@ -5,10 +5,10 @@ import {
   loginLoader,
   protectedLoader,
 } from '../auth/authFunctions';
+import Layout from '../layout/Layout';
 import Chess from '../pages/Chess';
 import ErrorPage from '../pages/ErrorPage';
 import Home from '../pages/Home';
-import Layout from '../pages/Layout';
 import LoginPage from '../pages/LoginPage';
 import Play from '../pages/Play';
 import { Path } from '../types';
