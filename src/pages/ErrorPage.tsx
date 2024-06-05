@@ -14,18 +14,20 @@ const ErrorPage: FC = () => {
   }
 
   return (
-    <div>
-      <h1>Something went wrong 😢</h1>
-      <p>{error.data}</p>
-      <button
-        type="button"
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Go back
-      </button>
-    </div>
+    <section className="main-container">
+      <div className="container">
+        <h1>Something went wrong 😢</h1>
+        <p>{error.data}</p>
+        <button
+          type="button"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          Go back
+        </button>
+      </div>
+    </section>
   );
 };
 

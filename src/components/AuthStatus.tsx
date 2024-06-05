@@ -6,7 +6,7 @@ const AuthStatus: FC = () => {
   // Get our logged in user, if they exist, from the root route loader data
   const { user } = useRouteLoaderData('root') as { user: string | null };
   const fetcher = useFetcher();
-  const isLoggingOut = fetcher.formData != null;
+  const isLoggingOut = fetcher.formData !== null;
 
   if (!user) {
     return <NavLink to={Path.Login}>Login</NavLink>;
