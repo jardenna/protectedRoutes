@@ -6,10 +6,10 @@ const Nav: FC = () => (
   <nav>
     <ul>
       <li>
-        <NavLink to={Path.Root}>Public Page</NavLink>
+        <NavLink to={Path.Root}>Home</NavLink>
       </li>
       <li>
-        <NavLink to={Path.Protected}>Protected Page</NavLink>
+        <NavLink to={Path.Chess}>Chess</NavLink>
       </li>
     </ul>
   </nav>

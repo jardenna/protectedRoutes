@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 
 export enum Path {
+  Chess = 'chess',
   Login = 'login',
   Logout = 'logout',
-  NewProtected = 'newprotected',
-  Protected = 'protected',
+  Play = 'play',
   Root = '/',
 }

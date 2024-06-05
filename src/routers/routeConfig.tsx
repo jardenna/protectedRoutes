@@ -1,4 +1,4 @@
-import { createHashRouter, redirect } from 'react-router-dom';
+import { createBrowserRouter, redirect } from 'react-router-dom';
 import fakeAuthProvider from '../auth/auth';
 import {
   loginAction,
@@ -7,13 +7,13 @@ import {
 } from '../auth/authFunctions';
 import Chess from '../pages/Chess';
 import ErrorPage from '../pages/ErrorPage';
-import PublicPage from '../pages/Home';
+import Home from '../pages/Home';
 import Layout from '../pages/Layout';
 import LoginPage from '../pages/LoginPage';
 import Play from '../pages/Play';
 import { Path } from '../types';
 
-const routeConfig = createHashRouter([
+const routeConfig = createBrowserRouter([
   {
     path: Path.Root,
     errorElement: <ErrorPage />,
@@ -31,7 +31,7 @@ const routeConfig = createHashRouter([
     children: [
       {
         index: true,
-        element: <PublicPage />,
+        element: <Home />,
       },
       {
         path: Path.Login,
