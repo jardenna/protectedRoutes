@@ -6,12 +6,12 @@ import {
   protectedLoader,
 } from '../auth/authFunctions';
 import Layout from '../layout/Layout';
-import Chess from '../pages/Chess';
+import Chess from '../pages/chess/Chess';
 import ErrorPage from '../pages/ErrorPage';
 import Home from '../pages/Home';
 import LoginPage from '../pages/LoginPage';
 import Play from '../pages/Play';
-import { Path } from '../types';
+import { Path, SubPathEnum } from '../types';
 
 const routeConfig = createBrowserRouter([
   {
@@ -45,8 +45,12 @@ const routeConfig = createBrowserRouter([
         loader: protectedLoader,
         children: [
           {
-            path: 'play',
+            path: SubPathEnum.Play,
             element: <Play />,
+          },
+          {
+            path: SubPathEnum.Chat,
+            element: <div>Chat</div>,
           },
         ],
       },

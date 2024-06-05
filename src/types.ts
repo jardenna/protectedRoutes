@@ -6,5 +6,6 @@ export enum Path {
 }
 
 export enum SubPathEnum {
+  Chat = 'chat',
   Play = 'play',
 }

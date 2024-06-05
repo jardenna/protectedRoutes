@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouterProvider } from 'react-router-dom';
-import routeConfig from './routers/routeConfig';
+import routeConfig from './routing/routeConfig';
 
 function App() {
   return (

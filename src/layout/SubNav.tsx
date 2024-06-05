@@ -7,13 +7,14 @@ interface subNavListItemProps {
   url: SubPathEnum;
   linkText: string;
 }
+
 interface SubNavListProps {
   subNavList: subNavListItemProps[];
 }
 
 const SubNav: FC<SubNavListProps> = ({ subNavList }) => (
-  <nav className="main-nav">
-    <ul className="main-nav-list">
+  <nav className="sub-nav">
+    <ul className="sub-nav-list">
       {subNavList.map((subnav) => (
         <li key={subnav.id}>
           <NavLink to={subnav.url}>{subnav.linkText}</NavLink>
