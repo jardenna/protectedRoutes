@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import Nav from './Nav';
 import AuthStatus from '../components/AuthStatus';
+import Nav from './Nav';
 
 const Header: FC = () => (
   <header className="main-header">

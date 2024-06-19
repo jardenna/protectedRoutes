@@ -20,27 +20,8 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'typescript-sort-keys', 'import'],
+  plugins: ['react', '@typescript-eslint', 'typescript-sort-keys'],
   rules: {
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', 'internal'],
-        pathGroups: [
-          {
-            pattern: '{react,react-dom/**}',
-            group: 'external',
-            position: 'before',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['react'],
-        'newlines-between': 'never',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
     'typescript-sort-keys/string-enum': [
       'warn',
       'asc',

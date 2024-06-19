@@ -6,11 +6,11 @@ import {
   protectedLoader,
 } from '../auth/authFunctions';
 import Layout from '../layout/Layout';
-import Chess from '../pages/chess/Chess';
 import ErrorPage from '../pages/ErrorPage';
 import Home from '../pages/Home';
 import LoginPage from '../pages/LoginPage';
 import Play from '../pages/Play';
+import Chess from '../pages/chess/Chess';
 import { Path, SubPathEnum } from '../types';
 
 const routeConfig = createBrowserRouter([
@@ -40,7 +40,7 @@ const routeConfig = createBrowserRouter([
         element: <LoginPage />,
       },
       {
-        path: 'Chess',
+        path: Path.Chess,
         element: <Chess />,
         loader: protectedLoader,
         children: [

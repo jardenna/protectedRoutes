@@ -13,6 +13,9 @@ export default defineConfig({
     eslint(),
     ViteMinifyPlugin({}),
   ],
+  server: {
+    port: 5000,
+  },
   css: {
     devSourcemap: true,
   },

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
-import { subNavList } from './utils';
 import SubNav from '../../layout/SubNav';
+import { subNavList } from './utils';
 
 const Chess: FC = () => (
   <div>
