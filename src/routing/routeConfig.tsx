@@ -15,12 +15,9 @@ import { Path, SubPathEnum } from '../types';
 
 const routeConfig = createBrowserRouter([
   {
-    path: Path.Root,
-    errorElement: <ErrorPage />,
-  },
-  {
     id: 'root',
     path: Path.Root,
+    errorElement: <ErrorPage />,
     loader() {
       // Our root route always provides the user, if logged in
       return {
