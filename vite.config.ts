@@ -14,7 +14,7 @@ export default defineConfig({
     ViteMinifyPlugin({}),
   ],
   server: {
-    port: 5000,
+    port: 3000,
   },
   css: {
     devSourcemap: true,
